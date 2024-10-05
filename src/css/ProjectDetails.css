@@ -1,0 +1,202 @@
+.project-details-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .book-btn {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .book-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .booking-modal {
+    width: 90%;
+    max-width: 600px; /* Set a maximum width */
+    max-height: 100vh; /* Set a maximum height */
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    overflow-y: auto; /* Allow vertical scrolling */
+    opacity: 0; /* Start invisible */
+    transform: translateY(-50px); /* Start above */
+    animation: fadeIn 0.5s forwards;
+  }
+  @keyframes fadeIn {
+    to {
+      opacity: 1; /* Fade to visible */
+      transform: translateY(0); /* Move to position */
+    }
+  }
+  .booking-overlay {
+    background-color: rgba(0, 0, 0, 0.75);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: fadeInOverlay 0.5s forwards;
+}
+
+@keyframes fadeInOverlay {
+  from {
+    opacity: 0; /* Start invisible */
+  }
+  to {
+    opacity: 1; /* Fade to visible */
+  }
+}
+  .modal-title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .booking-form label {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+  
+  .booking-form input,
+  .booking-form textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .submit-btn {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .submit-btn:hover {
+    background-color: #218838;
+    transform: scale(1.05); /* Slightly increase size on hover */
+    transition: all 0.3s ease; /* Smooth transition */
+  }
+  
+  input:focus, textarea:focus {
+    border: 2px solid #007BFF; /* Change border color on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add shadow */
+    transition: all 0.3s ease; /* Smooth transition */
+  }
+  
+  
+  .close-btn {
+    padding: 10px 20px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  
+  .close-btn:hover {
+    background-color: #c82333;
+  }
+  
+  .booking-success {
+    text-align: center;
+  }
+  
+  .booking-success h2 {
+    color: #28a745;
+    margin-bottom: 10px;
+  }
+  
+  .booking-success p {
+    margin-bottom: 20px;
+  }
+  
+
+  .error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  .confirmation-message {
+    color: green;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .alert-container {
+    position: fixed; /* Position fixed to center on the screen */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Offset to truly center */
+    z-index: 1000; /* Ensure it's above other elements */
+    animation: fadeInAlert 0.5s ease-out; /* Animation for fade-in */
+}
+
+@keyframes fadeInAlert {
+    from {
+        opacity: 0; /* Start transparent */
+        transform: translate(-50%, -30%); /* Start a bit above */
+    }
+    to {
+        opacity: 1; /* Fully visible */
+        transform: translate(-50%, -50%); /* Center position */
+    }
+}
+
+.alert {
+    background-color: #f0fff0; /* Light green background */
+    border: 1px solid #28a745; /* Green border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 15px; /* Padding inside alert */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    display: flex; /* Use flexbox to align items */
+    align-items: center; /* Center items vertically */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.checkmark {
+    width: 24px; /* Size of the checkmark */
+    height: 24px; /* Size of the checkmark */
+    margin-right: 10px; /* Space between checkmark and text */
+    background-color: #28a745; /* Green background for checkmark */
+    clip-path: polygon(0 50%, 30% 80%, 100% 0, 100% 100%, 0 100%); /* Checkmark shape */
+    animation: checkmarkAnimate 0.5s ease-out; /* Animation for checkmark */
+}
+
+@keyframes checkmarkAnimate {
+    0% {
+        transform: scale(0); /* Start small */
+    }
+    50% {
+        transform: scale(1.2); /* Scale up a bit */
+    }
+    100% {
+        transform: scale(1); /* Final size */
+    }
+}
+
+.alert-message {
+    color: #333; /* Dark text color */
+    font-size: 18px; /* Increase font size */
+    margin: 0; /* Remove default margin */
+}

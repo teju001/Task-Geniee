@@ -1,0 +1,67 @@
+/* AllProjects.css */
+.all-projects-container {
+    padding-top: 20px; /* Add space below navbar */
+    margin: 0 auto; /* Center the container */
+}
+
+.header-container {
+    margin: 20px 0; /* Margin above and below */
+    text-align: center; /* Center the text */
+}
+
+.projectslist {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between grid items */
+}
+
+.projectcard {
+    position: relative; /* Position relative to enable absolute positioning for child elements */
+    overflow: hidden; /* Hide overflow */
+    border-radius: 8px; /* Round corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit text color */
+    transition: transform 0.3s ease; /* Smooth scaling effect */
+}
+
+.projectcard:hover {
+    transform: scale(1.05); /* Scale card slightly on hover */
+}
+
+.projecti {
+    width: 100%; /* Full width of the card */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease; /* Smooth transition on hover */
+}
+
+.projectinfo {
+    position: absolute; /* Position absolutely to overlay on the image */
+    bottom: 0; /* Align to the bottom */
+    left: 0; /* Align to the left */
+    right: 0; /* Align to the right */
+    background: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background for contrast */
+    color: white; /* White text color */
+    padding: 10px; /* Add some padding */
+    text-align: center; /* Center the text */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+}
+
+.projectcard:hover .projectinfo {
+    opacity: 1; /* Show details on hover */
+}
+
+.projectinfo h3 {
+    margin: 0; /* Remove margin from top */
+    font-size: 1.5rem; /* Title font size */
+}
+
+.projectinfo p {
+    margin: 0; /* Remove margin */
+    font-size: 1rem; /* Price font size */
+}
+
+label {
+    font-size: 1.2rem; /* Label font size */
+    margin-right: 10px; /* Space between label and select */
+}
